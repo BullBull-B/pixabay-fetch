@@ -30,6 +30,10 @@ const Movie = () => {
 
     fetchMedia();
   }, [searchQuery, mediaType, photoUrl, videoUrl]); // Only fetch when searchQuery or mediaType changes
+  useEffect(() => {
+    setcurrentImgIndex(0);
+    setcurrentVidIndex(0);
+  }, [searchQuery]);
 
   const handleSearchChange = (event) => {
     event.target.value.length === 0 ? setSearchQuery("") : setSearchQuery(event.target.value);
