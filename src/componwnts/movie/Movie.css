@@ -1,0 +1,137 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+.search-bar {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.buttons button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button.active {
+    background-color: #0056b3;
+}
+
+.buttons button:hover {
+    background-color: #0056b3;
+}
+
+.media-viewer {
+    margin-bottom: 20px;
+}
+
+.media-item {
+    display: flex;
+    justify-content: center;
+}
+
+.media-item img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px; /* Add border radius for rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add box shadow for depth */
+}
+
+.media-item video {
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.fit-size {
+    max-height: 80vh;
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation button {
+    margin: 0 7px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.navigation button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For smaller devices like smartphones */
+@media (max-width: 576px) {
+    .header {
+        flex-direction: column;
+    }
+    .search-bar {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 10px;
+    }
+    .buttons {
+        order: -1;
+        margin-bottom: 10px;
+    }
+    .buttons button {
+        min-width: 80px;
+        font-size: 0.8rem;
+    }
+}
+
+/* For medium-sized devices like tablets */
+@media (min-width: 576px) and (max-width: 992px) {
+    .header {
+        flex-direction: column;
+    }
+    .buttons {
+        margin-top: 10px;
+    }
+}
+
+/* For larger devices like laptops and desktops */
+@media (min-width: 992px) {
+    .container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    .media-item {
+        margin-bottom: 20px;
+    }
+    .navigation {
+        margin-top: 20px;
+    }
+}
